@@ -1,0 +1,407 @@
+/* Variáveis de Cores e Estilos */
+:root {
+    --primary-color: #2E6F40;
+    --primary-light: #4E9F6D;
+    --dark-green: #1B3B22;
+    --accent-color: #E29578;
+    --bg-light: #F9FBF9;
+    --text-dark: #2B2D42;
+    --text-light: #FFFFFF;
+    --font-title: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+/* Header & Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.4s, padding 0.4s;
+}
+
+.navbar.scrolled {
+    background: rgba(27, 59, 34, 0.95);
+    padding: 12px 8%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+.logo span {
+    color: var(--primary-light);
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.btn-nav {
+    background: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.3s !important;
+}
+
+.btn-nav:hover {
+    background: var(--primary-light);
+    color: var(--text-light) !important;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: var(--text-light);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: var(--font-title);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h1 .highlight {
+    color: var(--primary-light);
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+.hero-btns a {
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-right: 20px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background: var(--text-light);
+    color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+/* Seções Gerais */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.container-small {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+/* Grid de Pilares */
+.grid-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 4px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(46, 111, 64, 0.1);
+    border-top: 4px solid var(--primary-color);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+/* Tecnologia (Split Section) */
+.tech-section {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f0f5f1;
+}
+
+.tech-image {
+    flex: 1;
+    min-width: 450px;
+    min-height: 500px;
+    background: url('https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+}
+
+.tech-content {
+    flex: 1;
+    min-width: 450px;
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tech-content h2 {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    color: var(--dark-green);
+    margin-bottom: 25px;
+}
+
+.tech-content p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.tech-list {
+    list-style: none;
+}
+
+.tech-list li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.tech-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Manifesto */
+.manifesto {
+    position: relative;
+    padding: 140px 20px;
+    background: url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+
+.manifesto-overlay {
+    position: absolute;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(27, 59, 34, 0.7);
+    z-index: 1;
+}
+
+.manifesto-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.manifesto blockquote {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Formulário de Contato */
+.contact-section {
+    background: white;
+}
+
+.contact-section h2 {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.animated-form .form-group {
+    margin-bottom: 25px;
+}
+
+.animated-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-green);
+}
+
+.animated-form input, 
+.animated-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.animated-form input:focus, 
+.animated-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(46, 111, 64, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background: var(--dark-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: var(--primary-color);
+}
+
+#form-response {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#form-response.success {
+    background: #e6f4ea;
+    color: #137333;
+}
+
+.hidden { display: none; }
+
+/* Rodapé */
+footer {
+    background: var(--dark-green);
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar { padding: 20px 5%; }
+    .nav-links { display: none; } /* Simplificado para o escopo */
+    .hero h1 { font-size: 2.8rem; }
+    .tech-image, .tech-content { min-width: 100%; }
+    .manifesto blockquote { font-size: 1.8rem; }
+}
