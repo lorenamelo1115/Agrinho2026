@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFuturo | Sustentabilidade & Equilíbrio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="navbar">
+        <div class="logo">Agro<span>Futuro</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#manifesto">Manifesto</a></li>
+                <li><a href="#contato" class="btn-nav">Fazer Parte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>O Futuro da Terra é o <br><span class="highlight">Equilíbrio</span></h1>
+            <p>Conciliando a alta produtividade tecnológica com o respeito absoluto à biodiversidade. Conheça a revolução da agricultura sustentável.</p>
+            <div class="hero-btns">
+                <a href="#pilares" class="btn-primary">Explore os Pilares</a>
+                <a href="#tecnologia" class="btn-secondary">Nossa Tecnologia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Pilares -->
+    <section id="pilares" class="pillars">
+        <div class="container">
+            <h2 class="section-title">Cultivando com Consciência</h2>
+            <p class="section-subtitle">Como unimos a sabedoria da natureza à inovação humana.</p>
+            
+            <div class="grid-pillars">
+                <div class="card">
+                    <div class="icon">🌱</div>
+                    <h3>Regeneração</h3>
+                    <p>Práticas que devolvem a saúde ao solo, capturam carbono e protegem os lençóis freáticos.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">☀️</div>
+                    <h3>Energia Limpa</h3>
+                    <p>Fazendas 100% autossuficientes, movidas a energia solar, eólica e biomassa.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💧</div>
+                    <h3>Eficiência Hídrica</h3>
+                    <p>Sistemas de irrigação gota a gota inteligentes que reduzem o desperdício de água a zero.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Tecnologia (Destaque Split) -->
+    <section id="tecnologia" class="tech-section">
+        <div class="tech-image">
+            <!-- Imagem conceitual via CSS Background -->
+        </div>
+        <div class="tech-content">
+            <h2>Tecnologia a Serviço da Vida</h2>
+            <p>Não enxergamos a tecnologia como uma forma de dominar a natureza, mas sim de compreendê-la. Através de sensores IoT, inteligência artificial e drones de precisão, monitoramos a saúde de cada centímetro de plantio.</p>
+            <ul class="tech-list">
+                <li><strong>IA de Precisão:</strong> Previsão de pragas sem defensivos químicos agressivos.</li>
+                <li><strong>Análise Nutricional:</strong> Diagnóstico do solo em tempo real.</li>
+                <li><strong>Rastreabilidade Total:</strong> Do campo à mesa, com total transparência.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Manifesto / Frase de Impacto -->
+    <section id="manifesto" class="manifesto">
+        <div class="manifesto-overlay"></div>
+        <div class="manifesto-text">
+            <blockquote>
+                "A terra não é uma herança dos nossos pais, mas um empréstimo dos nossos filhos."
+            </blockquote>
+            <cite>— Provérbio Indígena</cite>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section id="contato" class="contact-section">
+        <div class="container-small">
+            <h2>Junte-se à Revolução Verde</h2>
+            <p>Seja você um produtor, investidor ou entusiasta, o futuro precisa da sua voz. Entre em contato conosco.</p>
+            
+            <form id="agro-form" class="animated-form">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" required placeholder="Ex: Gabriel Silva">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="seu@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Como você deseja colaborar?</label>
+                    <textarea id="message" rows="4" placeholder="Sua mensagem..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+            <div id="form-response" class="hidden"></div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 AgroFuturo. Cultivando um amanhã sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
